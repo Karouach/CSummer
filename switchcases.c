@@ -1,8 +1,8 @@
 /*
  ============================================================================
- Name        : ifstatement.c
+ Name        : switchcases.c
  Author      :
- Description : if-statements, Ansi-style
+ Description : The switch statement, Ansi-style
  ============================================================================
  */
 
