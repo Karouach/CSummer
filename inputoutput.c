@@ -15,8 +15,15 @@ int main(void) {
     char c;
     printf("How do you feel on a scale of 1-5? ");
     c = getchar();
+
         printf("Enter Name: ");
         scanf("%s", &name);
+
+        printf("Enter Address: ");
+        scanf("%s", &adress);
+
+        printf("Entered Name: %s\n", name);
+        printf("Entered Address: %s\n ", adress);
 
     return EXIT_SUCCESS;
 }
