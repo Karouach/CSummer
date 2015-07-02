@@ -1,8 +1,8 @@
 /*
  ============================================================================
- Name        : ifstatement.c
+ Name        : ifelse.c
  Author      :
- Description : if-statements, Ansi-style
+ Description : if-else statements, Ansi-style
  ============================================================================
  */
 
@@ -13,27 +13,34 @@ int getNumber(void);
 void tooSmall(void);
 void tooLarge(void);
 void justRight(void);
+void checkError(int num);
 
 int main(void) {
-
     int num = getNumber();
 
-    if(num < 0)
-        tooSmall();
-    if (num > 100)
-        tooLarge();
-    if ((num >= 0) && (num <= 100))
+    if((num >= 0) && (num <= 100))
         justRight();
+    else
+        checkError(num);
 
     return EXIT_SUCCESS;
 }
 
+//---- FUNCTION DEFINITIONS ----
 int getNumber(void){
     int num;
-    printf("Enter a Number between 0 & 100: ");
-    scanf("%d", &num);
+    printf("Enter a number between 0 and 100:");
+    scanf("%d",&num);
     return num;
 }
+
+void checkError(int num){
+    if(num < 0)
+        tooSmall();
+    else
+        tooLarge();
+}
+
 void tooSmall(void){
     printf("The number is too small.\n");
 }
@@ -45,3 +52,4 @@ void tooLarge(void){
 void justRight(void){
     printf("The number is within the correct range\n");
 }
+
